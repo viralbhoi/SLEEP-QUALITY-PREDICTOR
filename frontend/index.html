@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Sleep Quality Predictor</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div class="card">
+            <h2>Sleep Quality Predictor</h2>
+
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>Age</label>
+                    <input type="number" id="age" min="18" max="100" required />
+                </div>
+                <div class="input-group">
+                    <label>Gender</label>
+                    <select id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Occupation</label>
+                    <select id="occupation">
+                        <option>Software Engineer</option>
+                        <option>Doctor</option>
+                        <option>Teacher</option>
+                        <option>Sales Representative</option>
+                        <option>Manager</option>
+                        <option>Scientist</option>
+                        <option>Student</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>BMI Category</label>
+                    <select id="bmi">
+                        <option>Normal</option>
+                        <option>Overweight</option>
+                        <option>Obese</option>
+                        <option>Underweight</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Sleep Duration (hours)</label>
+                    <input
+                        type="number"
+                        id="sleep"
+                        step="0.1"
+                        min="1"
+                        max="12"
+                    />
+                </div>
+                <div class="input-group">
+                    <label>Physical Activity Level</label>
+                    <input type="number" id="activity" min="0" max="120" />
+                </div>
+                <div class="input-group">
+                    <label>Daily Steps</label>
+                    <input type="number" id="steps" min="0" max="20000" />
+                </div>
+                <div class="input-group">
+                    <label>Stress Level (1-10)</label>
+                    <input type="range" id="stress" min="1" max="10" />
+                </div>
+
+                <div class="input-group">
+                    <label>Heart Rate</label>
+                    <input type="number" id="heart" min="40" max="120" />
+                </div>
+                <div class="input-group">
+                    <label>Blood Pressure (Systolic)</label>
+                    <input type="number" id="bps" placeholder="e.g. 120" />
+                </div>
+                <div class="input-group">
+                    <label>Blood Pressure (Diastolic)</label>
+                    <input type="number" id="bpd" placeholder="e.g. 80" />
+                </div>
+            </div>
+
+            <button onclick="predict()">Predict Sleep Quality</button>
+
+            <h3 id="result"></h3>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
